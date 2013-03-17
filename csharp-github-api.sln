@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-github-api.Models", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-github-api.ConsoleTest", "csharp-github-api.ConsoleTest\csharp-github-api.ConsoleTest.csproj", "{A70688C0-9505-4F39-8222-D773D0D66890}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-github-api.GetAuthToken", "csharp-github-api.GetAuthToken\csharp-github-api.GetAuthToken.csproj", "{AB138525-814F-4160-8270-9114523DCFA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +85,16 @@ Global
 		{A70688C0-9505-4F39-8222-D773D0D66890}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{A70688C0-9505-4F39-8222-D773D0D66890}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{A70688C0-9505-4F39-8222-D773D0D66890}.Release|x86.ActiveCfg = Release|Any CPU
+		{AB138525-814F-4160-8270-9114523DCFA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB138525-814F-4160-8270-9114523DCFA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB138525-814F-4160-8270-9114523DCFA6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{AB138525-814F-4160-8270-9114523DCFA6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{AB138525-814F-4160-8270-9114523DCFA6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AB138525-814F-4160-8270-9114523DCFA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB138525-814F-4160-8270-9114523DCFA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB138525-814F-4160-8270-9114523DCFA6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{AB138525-814F-4160-8270-9114523DCFA6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{AB138525-814F-4160-8270-9114523DCFA6}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
