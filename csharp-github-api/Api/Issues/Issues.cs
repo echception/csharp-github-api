@@ -16,9 +16,55 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Collections.Generic;
+using System.Dynamic;
+using LoggingExtensions.Logging;
+using RestSharp;
 namespace csharp_github_api.Api.Issues
 {
     public static class Issues
     {
+        public static IRestResponse<T> GetIssues<T>(this GithubRestApiClient client) where T : new()
+        {
+            var request = client.RequestFactory.CreateRequest(() => new RestRequest("/issues"));
+
+            var response = client.Execute<T>(request);
+
+            return response;
+        }
+
+        public static IRestResponse<T> CreateIssue<T>(this GithubRestApiClient client, string owner, string repository, string title, string body,
+                                                      string label) where T : new()
+        {
+            dynamic data = GetIssueData(title, body, label);
+
+            var request = client.RequestFactory.CreateRequest(
+                () =>
+                {
+                    var req = new RestRequest("/repos/{owner}/{repo}/issues")
+                    {
+                        Method = Method.POST,
+                        RequestFormat = DataFormat.Json
+                    };
+                    req.AddUrlSegment("owner", owner);
+                    req.AddUrlSegment("repo", repository);
+                    req.AddBody(data);
+                    return req;
+                });
+
+            var response = client.Execute<T>(request);
+
+            return response;
+        }
+
+        private static dynamic GetIssueData(string title, string body, string label)
+        {
+            dynamic data = new ExpandoObject();
+            data.title = title;
+            data.body = body;
+            data.labels = new List<string> {label};
+
+            return data;
+        }
     }
 }

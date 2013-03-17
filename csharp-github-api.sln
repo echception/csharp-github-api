@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-github-api", "csharp-github-api\csharp-github-api.csproj", "{AC8795CC-BDFF-4D37-85EE-E17A7D5A8A59}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-github-api.Tests", "csharp-github-api.Tests\csharp-github-api.Tests.csproj", "{16450E56-7802-4E7B-9F01-6A4824175B15}"
@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{A39951
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-github-api.Models", "csharp-github-api.Models\csharp-github-api.Models.csproj", "{81AC5037-2479-4AFC-A159-095265306A66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-github-api.ConsoleTest", "csharp-github-api.ConsoleTest\csharp-github-api.ConsoleTest.csproj", "{A70688C0-9505-4F39-8222-D773D0D66890}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,16 @@ Global
 		{81AC5037-2479-4AFC-A159-095265306A66}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{81AC5037-2479-4AFC-A159-095265306A66}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{81AC5037-2479-4AFC-A159-095265306A66}.Release|x86.ActiveCfg = Release|Any CPU
+		{A70688C0-9505-4F39-8222-D773D0D66890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A70688C0-9505-4F39-8222-D773D0D66890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A70688C0-9505-4F39-8222-D773D0D66890}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A70688C0-9505-4F39-8222-D773D0D66890}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A70688C0-9505-4F39-8222-D773D0D66890}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A70688C0-9505-4F39-8222-D773D0D66890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A70688C0-9505-4F39-8222-D773D0D66890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A70688C0-9505-4F39-8222-D773D0D66890}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A70688C0-9505-4F39-8222-D773D0D66890}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A70688C0-9505-4F39-8222-D773D0D66890}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
