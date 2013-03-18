@@ -46,11 +46,15 @@ namespace csharp_github_api.Api.Issues
                         Method = Method.POST,
                         RequestFormat = DataFormat.Json
                     };
+                    req.AddHeader("Content-Type", @"application/x-www-form-urlencoded");
                     req.AddUrlSegment("owner", owner);
                     req.AddUrlSegment("repo", repository);
                     req.AddBody(data);
                     return req;
                 });
+
+            request.RequestFormat = DataFormat.Json;
+            request.Method = Method.POST;
 
             var response = client.Execute<T>(request);
 

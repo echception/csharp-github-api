@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestSharp;
+using csharp_github_api.Authenticator;
 using csharp_github_api.Models;
 using csharp_github_api.Api.Authorizations;
+using csharp_github_api.Api.Issues;
 
 namespace csharp_github_api.GetAuthToken
 {
