@@ -16,9 +16,28 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using RestSharp;
 namespace csharp_github_api.Api.Issues
 {
     public static class IssuesMilestones
     {
+        public static IRestResponse<T> GetMilestonesForRepository<T>(this GithubRestApiClient client, string owner, string repository) where T : new()
+        {
+            var request = client.RequestFactory.CreateRequest(
+                () =>
+                {
+                    var req = new RestRequest("/repos/{owner}/{repo}/milestones")
+                    {
+                        Method = Method.GET,
+                    };
+                    req.AddUrlSegment("owner", owner);
+                    req.AddUrlSegment("repo", repository);
+                    return req;
+                });
+
+            var response = client.Execute<T>(request);
+
+            return response;
+        }
     }
 }

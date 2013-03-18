@@ -34,9 +34,9 @@ namespace csharp_github_api.Api.Issues
         }
 
         public static IRestResponse<T> CreateIssue<T>(this GithubRestApiClient client, string owner, string repository, string title, string body,
-                                                      string label) where T : new()
+                                                      string label, int? milestone = null) where T : new()
         {
-            dynamic data = GetIssueData(title, body, label);
+            dynamic data = GetIssueData(title, body, label, milestone);
 
             var request = client.RequestFactory.CreateRequest(
                 () =>
@@ -61,12 +61,17 @@ namespace csharp_github_api.Api.Issues
             return response;
         }
 
-        private static dynamic GetIssueData(string title, string body, string label)
+        private static dynamic GetIssueData(string title, string body, string label, int? milestone)
         {
             dynamic data = new ExpandoObject();
             data.title = title;
             data.body = body;
             data.labels = new List<string> {label};
+
+            if (milestone.HasValue)
+            {
+                data.milestone = milestone;
+            }
 
             return data;
         }
